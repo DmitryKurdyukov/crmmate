@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
+  <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Fira Code:wght@400;600&family=Montserrat:wght@500;600;700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap">
+
+
+    <meta name="viewport" content="width=device-width">
+
+    
+    <script>
+      (function () {
+        function save(name, value) {
+          localStorage.setItem(name, value);
+        }
+        const values = [
+          ['dashboardCharts', '[{"id":"leads","name":"Leads","checkbox":true},{"id":"ftd","name":"FTD","checkbox":true},{"id":"profit","name":"Profit","checkbox":true},{"id":"net_profit","name":"Net Profit","checkbox":true}]'],
+          ['dateType', 'created_at'],
+          ['fieldsLeadsTable', '{"send":[{"id":"phone","name":"Phone","checkbox":true},{"id":"source","name":"Source","checkbox":true},{"id":"broker","name":"Broker","checkbox":true},{"id":"landing_name","name":"Funnel","checkbox":true},{"id":"status","name":"Status","checkbox":true},{"id":"user","name":"User","checkbox":true},{"id":"full_name","name":"Name","checkbox":true},{"id":"offer","name":"Offer","checkbox":true},{"id":"country","name":"GEO","checkbox":true},{"id":"email","name":"Email","checkbox":true},{"id":"is_autologin","name":"Auth","checkbox":true},{"id":"keitaro_id","name":"Sub Id","checkbox":true},{"id":"campaign_name","name":"campaign_name","checkbox":true}],"hold":[],"invalid":[],"blackList":[],"duplicate":[],"errorLeads":[]}'],
+          ['iconify-count', '8'],
+          ['leadsPageTabs', '[{"name":"all","title":"Sent / Hold","checkbox":true},{"name":"send","title":"Sent","checkbox":true},{"name":"hold","title":"Hold","checkbox":true},{"name":"invalid","title":"Invalid","checkbox":true},{"name":"duplicate","title":"Duplicate","checkbox":true},{"name":"error","title":"Error","checkbox":true},{"name":"removed","title":"Removed","checkbox":true},{"name":"valid","title":"Valid","checkbox":true},{"name":"everything","title":"All","checkbox":false},{"name":"duplicate_b","title":"Dupl Broker","checkbox":false},{"name":"ftd","title":"FTD","checkbox":false},{"name":"imported","title":"Imported","checkbox":false}]'],
+          ['leadsPeriod', 'today'],
+          ['locale', 'en'],
+          ['path', 'admin'],
+          ['permissions', ''],
+          ['typeStat', 'buying'],
+          ['userAvatar', '/images/avatars/svg/vuero-1.svg'],
+          ['userName', 'Anton'],
+          ['userSettings', '{"tableFields":{"leads":{"send":[{"id":"phone","name":"Phone","checkbox":true},{"id":"source","name":"Source","checkbox":true},{"id":"broker","name":"Broker","checkbox":true},{"id":"landing_name","name":"Funnel","checkbox":true},{"id":"status","name":"Status","checkbox":true},{"id":"user","name":"User","checkbox":true},{"id":"full_name","name":"Name","checkbox":true},{"id":"offer","name":"Offer","checkbox":true},{"id":"country","name":"GEO","checkbox":true},{"id":"email","name":"Email","checkbox":true},{"id":"is_autologin","name":"Auth","checkbox":true},{"id":"keitaro_id","name":"Sub Id","checkbox":true},{"id":"campaign_name","name":"campaign_name","checkbox":true}],"hold":[],"invalid":[],"blackList":[],"duplicate":[],"errorLeads":[]}},"leadsPageTabs":[{"name":"all","title":"Sent / Hold","checkbox":true},{"name":"send","title":"Sent","checkbox":true},{"name":"hold","title":"Hold","checkbox":true},{"name":"invalid","title":"Invalid","checkbox":true},{"name":"duplicate","title":"Duplicate","checkbox":true},{"name":"error","title":"Error","checkbox":true},{"name":"removed","title":"Removed","checkbox":true},{"name":"valid","title":"Valid","checkbox":true},{"name":"everything","title":"All","checkbox":false},{"name":"duplicate_b","title":"Dupl Broker","checkbox":false},{"name":"ftd","title":"FTD","checkbox":false},{"name":"imported","title":"Imported","checkbox":false}],"permissions":[],"dashboardCharts":[]}'],
+          ['active-panel', 'none'],
+          ['color-schema', 'auto'],
+          ['crmSettings', '{"crmType":"Media","crmMaxUsers":"9999","approveDeposits":false,"autologin":true}'],
+          ['userId', '35'],
+          ['access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiM2QwOWNlZWExNDdhOTAwYTM5NTY1OTJmMTc0MDA5NTc4M2JlYWU4NTFkN2U1ZDQ3YjY1MGRkOWQzNjdkMjVmZmM2NDJkZDUxNzZlZjUzY2MiLCJpYXQiOjE3MzAyMTc1MDkuMjQ5MzEsIm5iZiI6MTczMDIxNzUwOS4yNDkzMTIsImV4cCI6MTc2MTc1MzUwOS4yNDUyOTgsInN1YiI6IjM1Iiwic2NvcGVzIjpbXX0.Z-tYZvn5YV_V75jVLATYTcGPIVceHlhKlaKN7EJJrEM-6oAMW6AnXQudsGYFZc3hBcoQ8oBKp0_gEkDPFrgjevdhLNTc2r3RyA3GGR9TGhWkvreXeXrjNX4O5r0GfZQX-O2o9r_5vozOXJMZ2B2Od4_DwrWOW-DHuaA5TBAErGnEIsS9Zm2WoYCIsiIY-sD9xkRn8nK0jJIXBoQ7lsQYr48k9TgUTJfxE5rAIjg9swPSaqZ46ItXz7ir-tIZJx4IrSc07AFhFbPQ-lQvkW01dXIhq9Z-EeKvE244g9dhi5coR7UoWWIMu7Mw3T2GXwORFFokbxMagTPDAR9bs6p8te_buhVI_lN2O3f27M8P5yMe2WqbHDJ9rDFeN_q9bHEcRqFlyDsRN3BNExEDT-9wbml1P3b4ZbKoINxSboSy086AEVhUbSSdut97iFvxh5gJOODbUY416ZxfRXKH2R6SL7VsTKKQNXNcW58OJuoIpmLN3JLbpS89pK6ugl7XSXnyXOgq4ZtZXFM-3LqFgPZ0yKM1CxdffLPmWPTG8ZCVNkoo_O3W7FPv0qHAJQhxqqrHf9Z9kX67U9hznbyQ61i07URD_84_KrEcvUnXOwSaQjsMgzaBo8V5d0z-ISbkiKEJ3Q2f_By9og8lWKYQ15yJN4sDaXQJWDTi-b7OtuuWG-0'],
+          ['role', 'admin'],
+          ['iconify-version', 'iconify2'],
+          ['iconify0', '{"cached":480615,"provider":"","data":{"prefix":"feather","lastModified":1722793403,"aliases":{},"width":24,"height":24,"icons":{"arrow-right":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 12h14m-7-7l7 7l-7 7\"/>"},"at-sign":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94\"/></g>"},"bell":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9m-4.27 13a2 2 0 0 1-3.46 0\"/>"},"check":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 6L9 17l-5-5\"/>"},"chevron-right":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m9 18l6-6l-6-6\"/>"},"clock":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/></g>"},"feather":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5zM16 8L2 22m15.5-7H9\"/>"},"file":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z\"/><path d=\"M13 2v7h7\"/></g>"},"filter":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M22 3H2l8 9.46V19l4 2v-8.54z\"/>"},"grid":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 3h7v7H3zm11 0h7v7h-7zm0 11h7v7h-7zM3 14h7v7H3z\"/>"},"log-out":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4m7 14l5-5l-5-5m5 5H9\"/>"},"mail":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2\"/><path d=\"m22 6l-10 7L2 6\"/></g>"},"map-pin":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></g>"},"message-circle":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 11.5a8.4 8.4 0 0 1-.9 3.8a8.5 8.5 0 0 1-7.6 4.7a8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8a8.5 8.5 0 0 1 4.7-7.6a8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z\"/>"},"more-vertical":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"1\"/><circle cx=\"12\" cy=\"5\" r=\"1\"/><circle cx=\"12\" cy=\"19\" r=\"1\"/></g>"},"paperclip":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48\"/>"},"phone-call":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2a19.8 19.8 0 0 1-8.63-3.07a19.5 19.5 0 0 1-6-6a19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72a12.8 12.8 0 0 0 .7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45a12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92\"/>"},"plus":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 5v14m-7-7h14\"/>"},"refresh-cw":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M23 4v6h-6M1 20v-6h6\"/><path d=\"M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15\"/></g>"},"smile":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M8 14s1.5 2 4 2s4-2 4-2M9 9h.01M15 9h.01\"/></g>"}}}}'],
+          ['iconify1', '{"cached":480615,"provider":"","data":{"prefix":"feather","lastModified":1722793403,"aliases":{},"width":24,"height":24,"icons":{"search":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21l-4.35-4.35\"/></g>"},"sidebar":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" ry=\"2\"/><path d=\"M9 3v18\"/></g>"},"x":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M18 6L6 18M6 6l12 12\"/>"}}}}'],
+          ['iconify2', '{"cached":480615,"provider":"","data":{"prefix":"feather","lastModified":1722793403,"aliases":{},"width":24,"height":24,"icons":{"circle":{"body":"<circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"/>"}}}}'],
+          ['iconify3', '{"cached":480615,"provider":"","data":{"prefix":"feather","lastModified":1722793403,"aliases":{},"width":24,"height":24,"icons":{"settings":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83a2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33a1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2a2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0a2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2a2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83a2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0a2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1\"/></g>"}}}}'],
+          ['iconify4', '{"cached":480615,"provider":"","data":{"prefix":"feather","lastModified":1722793403,"aliases":{},"width":24,"height":24,"icons":{"dollar-sign":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 1v22m5-18H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/>"},"users":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M23 21v-2a4 4 0 0 0-3-3.87m-4-12a4 4 0 0 1 0 7.75\"/></g>"}}}}'],
+          ['iconify5', '{"cached":480615,"provider":"","data":{"prefix":"feather","lastModified":1722793403,"aliases":{},"width":24,"height":24,"icons":{"chevron-left":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m15 18l-6-6l6-6\"/>"},"minus":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 12h14\"/>"}}}}'],
+          ['iconify6', '{"cached":480615,"provider":"","data":{"prefix":"feather","lastModified":1722793403,"aliases":{},"width":24,"height":24,"icons":{"copy":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"13\" height=\"13\" x=\"9\" y=\"9\" rx=\"2\" ry=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></g>"},"edit-2":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5L2 22l1.5-5.5z\"/>"}}}}'],
+          ['iconify7', '{"cached":480615,"provider":"","data":{"prefix":"feather","lastModified":1722793403,"aliases":{},"width":24,"height":24,"icons":{"calendar":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" ry=\"2\"/><path d=\"M16 2v4M8 2v4m-5 4h18\"/></g>"}}}}'],
+        ]
+
+        values.map(args => save(...args));
+
+      })()
+    </script>
+
+    <link
+            rel="preload"
+            as="style"
+            onload="this.rel='stylesheet'"
+            href="/vendors/font-awesome-v5.css"
+    />
+    <link
+            rel="preload"
+            as="style"
+            onload="this.rel='stylesheet'"
+            href="/vendors/line-icons-pro.css"
+    />
+
+    
+    <script>
+        ;(function () {
+            const prefersDark =
+                window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            const setting = localStorage.getItem('color-schema') || 'auto'
+            if (setting === 'dark' || (prefersDark && setting !== 'light'))
+                document.documentElement.classList.toggle('is-dark', true)
+        })()
+    </script>
+  <script type="module" crossorigin src="/assets/index-Svkr8qAM.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/@vue-DvSXG8OY.js">
+  <link rel="modulepreload" crossorigin href="/assets/hookable-bOmh9J_F.js">
+  <link rel="modulepreload" crossorigin href="/assets/@unhead-C8GIn_dH.js">
+  <link rel="modulepreload" crossorigin href="/assets/@vueuse-B5YwvBi1.js">
+  <link rel="modulepreload" crossorigin href="/assets/@intlify-BwA1qkjN.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue-i18n-Ct7kUK5D.js">
+  <link rel="modulepreload" crossorigin href="/assets/can-use-dom-Ch7kL8xk.js">
+  <link rel="modulepreload" crossorigin href="/assets/nprogress-DSmTBFYB.js">
+  <link rel="modulepreload" crossorigin href="/assets/@popperjs-CyRNZa_Y.js">
+  <link rel="modulepreload" crossorigin href="/assets/v-calendar-COHmsScS.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue-tippy-DnYNcFUq.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue-router-DwDdEKiK.js">
+  <link rel="modulepreload" crossorigin href="/assets/pinia-B4-ciXne.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue-BlVBb6II.js">
+  <link rel="modulepreload" crossorigin href="/assets/sortablejs-BpownXDQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/vuedraggable-DrPHqiy-.js">
+  <link rel="modulepreload" crossorigin href="/assets/@babel-B8luDtWs.js">
+  <link rel="modulepreload" crossorigin href="/assets/date-fns-DlAA0sa-.js">
+  <link rel="modulepreload" crossorigin href="/assets/@vuepic-D_ESaDHD.js">
+  <link rel="modulepreload" crossorigin href="/assets/xlsx-BwpPSLqB.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue3-excel-editor-BZIQ-9GP.js">
+  <link rel="modulepreload" crossorigin href="/assets/vee-validate-B_GghEPI.js">
+  <link rel="modulepreload" crossorigin href="/assets/defu-Dp6hddn5.js">
+  <link rel="modulepreload" crossorigin href="/assets/vuex-CBJTNNbk.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue3-apexcharts-I3PfHQpJ.js">
+  <link rel="modulepreload" crossorigin href="/assets/moment-i-YsoRPj.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue-time-date-range-picker-nwJmZjI9.js">
+  <link rel="modulepreload" crossorigin href="/assets/lodash-CI4eq_-m.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue-country-flag-next-DzQXLdzY.js">
+  <link rel="modulepreload" crossorigin href="/assets/axios-NEgiU-5B.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue3-easy-data-table-Bv-UjlqU.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue-select-2A5lvq7N.js">
+  <link rel="modulepreload" crossorigin href="/assets/state-local-BC9ybJZH.js">
+  <link rel="modulepreload" crossorigin href="/assets/@monaco-editor-BDZWgZ9J.js">
+  <link rel="modulepreload" crossorigin href="/assets/@guolao-DUgdz43R.js">
+  <link rel="modulepreload" crossorigin href="/assets/vuetify-DmxsvLRd.js">
+  <link rel="modulepreload" crossorigin href="/assets/lodash-es-BpmHSHTX.js">
+  <link rel="modulepreload" crossorigin href="/assets/simplebar-core-CDGGEr9C.js">
+  <link rel="modulepreload" crossorigin href="/assets/simplebar-CEzXePIs.js">
+  <link rel="modulepreload" crossorigin href="/assets/@iconify-CSYqCi5E.js">
+  <link rel="modulepreload" crossorigin href="/assets/@vueform-D9mHHKuZ.js">
+  <link rel="modulepreload" crossorigin href="/assets/notyf-DfibISxV.js">
+  <link rel="modulepreload" crossorigin href="/assets/vue-the-mask-CzLbAaS1.js">
+  <link rel="stylesheet" crossorigin href="/assets/nprogress-BUMXTAWU.css">
+  <link rel="stylesheet" crossorigin href="/assets/v-calendar-DGP4hL2K.css">
+  <link rel="stylesheet" crossorigin href="/assets/@vuepic-CRTUdKOi.css">
+  <link rel="stylesheet" crossorigin href="/assets/vue3-excel-editor-uSkul2i4.css">
+  <link rel="stylesheet" crossorigin href="/assets/vue-time-date-range-picker-DdDCG7CO.css">
+  <link rel="stylesheet" crossorigin href="/assets/vue3-easy-data-table-DuevJDmg.css">
+  <link rel="stylesheet" crossorigin href="/assets/vue-select-BGcSlmpQ.css">
+  <link rel="stylesheet" crossorigin href="/assets/vuetify-CCwzhEYb.css">
+  <link rel="stylesheet" crossorigin href="/assets/simplebar-DDK7QoNI.css">
+  <link rel="stylesheet" crossorigin href="/assets/@vueform-Cc7TPxkO.css">
+  <link rel="stylesheet" crossorigin href="/assets/notyf-CV79g7kv.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-Dj6Yj4X1.css">
+  <link rel="stylesheet" crossorigin href="/assets/tiny-slider-B1MWgBwn.css">
+  <link rel="stylesheet" crossorigin href="/assets/tippy-DCQCcctE.css">
+<link rel="manifest" href="/manifest.webmanifest"></head>
+<body>
+
+<div data-teleport-bg></div>
+
+<div id="app" class="app-wrapper"></div>
+<style>
+  .page_statistics > .v-row > :nth-child(2),
+  .page_statistics > .v-row > :nth-child(3) {
+    filter: blur(16px);
+  }
+</style>
+</body>
+</html>
